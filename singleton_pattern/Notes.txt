@@ -1,0 +1,22 @@
+# Singleton Pattern
+
+- Instantiated once, accessed globally
+- mannage global state in an application
+
+
+-  The `Object.freeze` method makes sure that consuming code cannot modify the Singleton. 
+
+- objects are passed by reference
+- However, the common usecase for a Singleton is to have some sort of global state throughout your application. Having multiple parts of your codebase rely on the same mutable object can lead to unexpected behavior.
+
+. Understandings
+ - Singleton is used when we need something that is global and can be accessed from anywhere.
+ - But, the thing is if you have a global state like this, it can be modified unneccesarily, that could lead to wrong value. 
+ - So, it is mostly avoided in Js(Singletom is anti-pattern in Js)
+ - In languages like React, we have state management tools like Redux and react context, to have a global state/value. The pros are the state can only be modified if it is needed to be by using reducer and dispatching an action.
+ - Testing can be tricky, if the value is modified somewhere it is not expected to, the entire test suite is going to fail.
+
+. Questions/Doubts
+ - What is dependency hiding?
+ - 'module' system in JS (export , import in Js)
+ - ES2015 - explore more
